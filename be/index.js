@@ -15,7 +15,12 @@ mongoose.plugin(MongooseDelete);
 
 dotenv.config();
 
-const app = express();
+app.use(
+  cors({
+    origin: ["https://ffxiv-relic-tracker-ten.vercel.app"],
+    credentials: true,
+  })
+);
 const baseURL = "/api/v1";
 
 db();
