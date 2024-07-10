@@ -32,7 +32,9 @@ const Characters = () => {
     (async () => {
       const {
         data: { data },
-      } = await axios.get(`http://localhost:8080/api/v1/users/${user.userId}`);
+      } = await axios.get(
+        `https://ffxiv-relic-tracker-api.vercel.app/api/v1/users/${user.userId}`
+      );
 
       localStorage.setItem("characters", JSON.stringify(data));
       dispatch({ type: "CHAR_LIST", payload: data });

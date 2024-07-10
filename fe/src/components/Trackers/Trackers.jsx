@@ -34,7 +34,7 @@ const Trackers = () => {
       const {
         data: { data },
       } = await axios.get(
-        `http://localhost:8080/api/v1/trackers/by_character/${activeChar.charId}`
+        `https://ffxiv-relic-tracker-api.vercel.app/api/v1/trackers/by_character/${activeChar.charId}`
       );
 
       localStorage.setItem("trackers", JSON.stringify(data));

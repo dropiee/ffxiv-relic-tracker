@@ -13,11 +13,14 @@ const RegistrationScreen = () => {
     try {
       e.preventDefault();
 
-      await axios.post("http://localhost:8080/api/v1/users/register", {
-        username,
-        email,
-        password,
-      });
+      await axios.post(
+        "https://ffxiv-relic-tracker-api.vercel.app/api/v1/users/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
 
       login(e, { email, password });
     } catch (error) {

@@ -14,10 +14,13 @@ const useLogin = () => {
 
       const {
         data: { data },
-      } = await axios.post("http://localhost:8080/api/v1/users/login", {
-        email: userCredentials.email,
-        password: userCredentials.password,
-      });
+      } = await axios.post(
+        "https://ffxiv-relic-tracker-api.vercel.app/api/v1/users/login",
+        {
+          email: userCredentials.email,
+          password: userCredentials.password,
+        }
+      );
 
       localStorage.setItem("user", JSON.stringify(data));
       setIsLoggedIn(true);

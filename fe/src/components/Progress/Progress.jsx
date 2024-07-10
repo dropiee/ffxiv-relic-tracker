@@ -28,7 +28,7 @@ const Progress = () => {
       const {
         data: { data },
       } = await axios.get(
-        `http://localhost:8080/api/v1/progress/by_character/${activeChar.charId}`
+        `https://ffxiv-relic-tracker-api.vercel.app/api/v1/progress/by_character/${activeChar.charId}`
       );
       localStorage.setItem("progress", JSON.stringify(data));
       dispatch({ type: "PROGRESS_LIST", payload: data });

@@ -14,7 +14,7 @@ const DeleteTracker = ({ trackerId, onReload }) => {
 
     try {
       const deleteTracker = await axios.delete(
-        `http://localhost:8080/api/v1/trackers/${trackerId}`,
+        `https://ffxiv-relic-tracker-api.vercel.app/api/v1/trackers/${trackerId}`,
         { headers: { Authorization: `Bearer ${accessToken}` } }
       );
 

@@ -24,13 +24,13 @@ const CreateCharacter = () => {
     const {
       data: { data },
     } = await axios.post(
-      "http://localhost:8080/api/v1/characters",
+      "https://ffxiv-relic-tracker-api.vercel.app/api/v1/characters",
       { charName: name, charWorld: world },
       { headers: { Authorization: `Bearer ${accessToken}` } }
     );
 
     const newProgress = await axios.post(
-      "http://localhost:8080/api/v1/progress",
+      "https://ffxiv-relic-tracker-api.vercel.app/api/v1/progress",
       { charId: data._id },
       { headers: { Authorization: `Bearer ${accessToken}` } }
     );

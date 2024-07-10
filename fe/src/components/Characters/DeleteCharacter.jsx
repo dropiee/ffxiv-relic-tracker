@@ -17,7 +17,7 @@ const DeleteCharacter = ({ charId, onReload }) => {
 
     try {
       const deleteChar = await axios.delete(
-        `http://localhost:8080/api/v1/characters/${charId}`,
+        `https://ffxiv-relic-tracker-api.vercel.app/api/v1/characters/${charId}`,
         { headers: { Authorization: `Bearer ${accessToken}` } }
       );
 

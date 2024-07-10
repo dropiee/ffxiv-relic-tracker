@@ -22,7 +22,7 @@ const CreateTracker = () => {
     const {
       data: { data },
     } = await axios.post(
-      "http://localhost:8080/api/v1/trackers/",
+      "https://ffxiv-relic-tracker-api.vercel.app/api/v1/trackers/",
       { charId: activeChar.charId, trackerSeries: series, trackerJob: job },
       { headers: { Authorization: `Bearer ${accessToken}` } }
     );

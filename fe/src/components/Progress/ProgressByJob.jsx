@@ -14,7 +14,7 @@ const ProgressByJob = ({ progressId, relicJob, relicProgress }) => {
     const {
       data: { data },
     } = await axios.patch(
-      `http://localhost:8080/api/v1/progress/${progressId}/update`,
+      `https://ffxiv-relic-tracker-api.vercel.app/api/v1/progress/${progressId}/update`,
       { relicProgress: e.target.value },
       { headers: { Authorization: `Bearer ${accessToken}` } }
     );
