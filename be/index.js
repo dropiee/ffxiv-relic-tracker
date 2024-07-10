@@ -19,9 +19,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "ffxiv-relic-tracker-api-git-main-drops-projects-df7257b8.vercel.app",
-    ],
+    origin: "*",
     credentials: true,
   })
 );
