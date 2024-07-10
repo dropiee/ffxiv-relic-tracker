@@ -15,9 +15,13 @@ mongoose.plugin(MongooseDelete);
 
 dotenv.config();
 
+const app = express();
+
 app.use(
   cors({
-    origin: ["https://ffxiv-relic-tracker-ten.vercel.app"],
+    origin: [
+      "ffxiv-relic-tracker-api-git-main-drops-projects-df7257b8.vercel.app",
+    ],
     credentials: true,
   })
 );
