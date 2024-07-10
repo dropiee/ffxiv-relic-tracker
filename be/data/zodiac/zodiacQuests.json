@@ -1,0 +1,50 @@
+[
+  {
+    "stage": "Base",
+    "title": "A Relic Reborn",
+    "location": "Gerolt | North Shroud (x30, y20)",
+    "reqItems": "1 Radz-at-Han Quenching Oil"
+  },
+  {
+    "stage": "Zenith",
+    "title": "Zenith Zodiac Weapon",
+    "location": "Furnace | North Shroud (x30, y20)",
+    "reqItems": "3 Thavnairan Mists"
+  },
+  {
+    "stage": "Atma",
+    "title": "Up in Arms",
+    "location": "Gerolt | North Shroud (x30, y20)",
+    "reqItems": "12 Atma of FATES"
+  },
+  {
+    "stage": "Animus",
+    "title": "Trials of the Braves",
+    "location": "Jalzahn | North Shroud (x30, y19)",
+    "reqItems": "900 Allagan Tomestone of Poetics"
+  },
+  {
+    "stage": "Novus",
+    "title": "Celestial Radiance/Star Light, Star Bright",
+    "location": "Jalzahn | North Shroud (x30, y19), Hubairtin | Central Thanalan (x23, y13)",
+    "reqItems": "3 Superior Enchanted Ink, More than 75 Materia, 75 Alexandrite"
+  },
+  {
+    "stage": "Nexus",
+    "title": "Nexus Zodiac Weapon",
+    "location": "Jalzahn | North Shroud (x30, y19)",
+    "reqItems": "1x Zodiac Glass"
+  },
+  {
+    "stage": "Zodiac",
+    "title": "Zodiac Brave Weapon",
+    "location": "Jalzahn | North Shroud (x30, y19)",
+    "reqItems": "80k Company Seals, 800 Poetics, at least 400k Gil, 4 Bombard Core, 4 Sacred Spring Water, 10 HQ Items"
+  },
+  {
+    "stage": "Zeta",
+    "title": "Zodiac Zeta Weapon",
+    "location": "Remon | Western La Noscea (x34.3, y31.7)",
+    "reqItems": "600 Allagan Tomestone of Poetics"
+  }
+]

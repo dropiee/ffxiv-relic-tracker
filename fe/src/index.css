@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand";
+  color: white;
+}
+
+body {
+  background-color: #333;
+}
+
+.login {
+  margin: auto;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #292929;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #191919;
+  height: 100px;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #191919;
+  width: 225px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+  margin-top: 100px;
+}
+
+.section {
+  background-color: #292929;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card {
+  background-color: #292929;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card:hover {
+  background-color: #707070;
+}
+
+.circle {
+  width: 10rem;
+  height: 10rem;
+  background-color: #7c7c7c;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.charCreate {
+  background-color: #292929;
+  padding: 50px 50px 25px 50px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.progressJob {
+  background-color: #292929;
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+}
+
+.button,
+#nav a.active,
+.deleteBtn {
+  background-color: #3d55a0;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover,
+.deleteBtn:hover {
+  opacity: 0.75;
+}
+
+.button:active,
+#nav a.active {
+  background-color: #17213e;
+  color: grey;
+}
+
+.deleteBtn {
+  background-color: #56201d;
+  padding: 4px;
+}
+
+.deleteBtn:active {
+  background-color: #3c1614;
+  color: rgb(58, 58, 58);
+}
+
+input {
+  color: black;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+
+select {
+  color: black;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+select:hover {
+  background-color: #a9a9a9;
+}

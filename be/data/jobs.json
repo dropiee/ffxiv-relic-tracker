@@ -1,0 +1,12 @@
+[
+  { "job": "Paladin", "code": "pld" },
+  { "job": "Warrior", "code": "war" },
+  { "job": "Dragoon", "code": "drg" },
+  { "job": "Monk", "code": "mnk" },
+  { "job": "Ninja", "code": "nin" },
+  { "job": "Bard", "code": "brd" },
+  { "job": "Black Mage", "code": "blm" },
+  { "job": "Summoner", "code": "smn" },
+  { "job": "Scholar", "code": "sch" },
+  { "job": "White Mage", "code": "whm" }
+]
