@@ -18,7 +18,7 @@ dotenv.config();
 app.use(
   cors({
     origin: [
-      "ffxiv-relic-tracker-br3r2sr2n-drops-projects-df7257b8.vercel.app",
+      "https://ffxiv-relic-tracker-br3r2sr2n-drops-projects-df7257b8.vercel.app",
     ],
     credentials: true,
   })
