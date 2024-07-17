@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import MyContext from "../MyContext";
-import logo from "../../public/assets/ffxiv-relic-tracker-logo.png";
+import logo from "../assets/ffxiv-relic-tracker-logo.png";
 
 const Header = () => {
   const { user, isLoggedIn, setIsLoggedIn, isActive, setIsActive, activeChar } =
