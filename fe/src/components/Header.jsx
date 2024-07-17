@@ -16,7 +16,7 @@ const Header = () => {
     <header className="header">
       <Link to="/" className="logo">
         <img
-          src="../../images/ffxiv-relic-tracker.png"
+          src={__dirname + "fe/public/assets/ffxiv-relic-tracker-logo.png"}
           alt="FFXIV Relic Tracker"
         />
       </Link>
