@@ -32,7 +32,7 @@ const Characters = ({ field, sort }) => {
       const {
         data: { data },
       } = await axios.get(
-        `http://ffxiv-relic-tracker-api.vercel.app/api/v1/users/${user.userId}?field=${field}&sort=${sort}`
+        `https://ffxiv-relic-tracker-api.vercel.app/api/v1/users/${user.userId}?field=${field}&sort=${sort}`
       );
 
       localStorage.setItem("characters", JSON.stringify(data));
