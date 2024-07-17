@@ -6,9 +6,8 @@ import {
   characterReducer,
   initialState,
 } from "../../reducers/characterReducer";
-import { Link } from "react-router-dom";
 
-const Characters = () => {
+const Characters = ({ field, sort }) => {
   const [state, dispatch] = useReducer(characterReducer, initialState);
   const { user } = useContext(MyContext);
   const [reload, setReload] = useState(false);
@@ -33,13 +32,13 @@ const Characters = () => {
       const {
         data: { data },
       } = await axios.get(
-        `https://ffxiv-relic-tracker-api.vercel.app/api/v1/users/${user.userId}`
+        `http://ffxiv-relic-tracker-api.vercel.app/api/v1/users/${user.userId}?field=${field}&sort=${sort}`
       );
 
       localStorage.setItem("characters", JSON.stringify(data));
       dispatch({ type: "CHAR_LIST", payload: data });
     })();
-  }, [state.characters.length, reload]);
+  }, [state.characters.length, reload, field, sort]);
 
   return <div className="flex justify-evenly py-10">{charList}</div>;
 };

@@ -36,7 +36,7 @@ const LoginScreen = () => {
         <div>
           Don't have an account yet? Click
           <Link to="/register" className="font-bold text-blue-400">
-            here
+            &nbsp;here&nbsp;
           </Link>
           to sign up.
         </div>

@@ -27,7 +27,7 @@ const TrackerCard = ({
     <div className="flex">
       <div className={accordion.wrapCollabsible}>
         <input id={trackerId} className={accordion.toggle} type="checkbox" />
-        <label for={trackerId} className={accordion.lblToggle}>
+        <label htmlFor={trackerId} className={accordion.lblToggle}>
           <div>
             <h1 className="text-3xl font-bold">{trackerSeries}</h1>
             <h2 className="text-xl mb-2">{trackerJob}</h2>

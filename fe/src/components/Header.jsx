@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import MyContext from "../MyContext";
 
 const Header = () => {
-  const { user, setIsLoggedIn, isActive, setIsActive, activeChar } =
+  const { user, isLoggedIn, setIsLoggedIn, isActive, setIsActive, activeChar } =
     useContext(MyContext);
 
   const logout = () => {
@@ -12,17 +12,13 @@ const Header = () => {
     setIsActive(false);
   };
 
-  const activeCharName = () => {
-    if (isActive) {
-      return activeChar.charName;
-    }
-    return;
-  };
-
   return (
     <header className="header">
-      <Link to="/" className="text-4xl ml-5 font-bold">
-        FFXIV Relic Tracker
+      <Link to="/" className="logo">
+        <img
+          src="../../images/ffxiv-relic-tracker.png"
+          alt="FFXIV Relic Tracker"
+        />
       </Link>
       <div className="flex gap-3 items-center px-3">
         <div className="flex flex-col text-center">
@@ -36,9 +32,13 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex flex-col">
-          <span>Hello, {user.username}</span>
+          {isLoggedIn ? (
+            <span>Hello, {user.username}</span>
+          ) : (
+            <span>Not logged in</span>
+          )}
           <Link to="/login" onClick={logout} className="button">
-            Sign out
+            {isLoggedIn ? "Sign out" : "Log in"}
           </Link>
         </div>
       </div>

@@ -59,7 +59,7 @@ const RegistrationScreen = () => {
         <div className="text-center mt-4">
           Go to
           <Link to="/login" className="font-bold text-blue-400">
-            Login
+            &nbsp;Login
           </Link>
         </div>
       </div>

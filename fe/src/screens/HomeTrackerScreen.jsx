@@ -9,8 +9,11 @@ const HomeScreen = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isLoggedIn) navigate("/login");
-    if (!isActive) navigate("/welcome");
+    if (!isLoggedIn) {
+      navigate("/login");
+    } else if (!isActive) {
+      navigate("/welcome");
+    }
   });
   return (
     <>

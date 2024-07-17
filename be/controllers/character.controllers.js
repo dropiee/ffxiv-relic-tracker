@@ -28,7 +28,23 @@ const createCharacter = asyncHandler(async (req, res) => {
 
 const getUserCharacters = asyncHandler(async (req, res) => {
   const { userId } = req.params;
-  const characters = await Character.find({ userId }).sort({ charName: -1 });
+  // Optional query parameters
+  const query = req.query;
+  let field = "charName";
+  let sort = 1;
+
+  if (Object.keys(query).length) {
+    for (let key in query) {
+      if (key == "field") {
+        field = query[key] === "world" ? "charWorld" : "charName";
+      }
+      if (key == "sort") {
+        sort = query[key] === "desc" ? -1 : 1;
+      }
+    }
+  }
+
+  const characters = await Character.find({ userId }).sort({ [field]: sort });
   if (!characters) {
     res.status(404);
     throw new Error("Character not found.");
@@ -86,6 +102,7 @@ const updateCharacter = asyncHandler(async (req, res) => {
 const deleteCharacter = asyncHandler(async (req, res) => {
   const { charId } = req.params;
 
+  // Mongoose-delete module is used to handle soft deletion
   try {
     const deletedChar = await Character.delete({ _id: charId });
     const deletedProgress = await Progress.delete({ charId });

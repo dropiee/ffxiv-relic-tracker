@@ -6,12 +6,7 @@ import { trackerReducer, initialState } from "../../reducers/trackerReducer.js";
 
 const Trackers = () => {
   const [state, dispatch] = useReducer(trackerReducer, initialState);
-  const {
-    user: { accessToken },
-    activeChar,
-    reload,
-    setReload,
-  } = useContext(MyContext);
+  const { activeChar, reload, setReload } = useContext(MyContext);
   const handleReload = () => {
     setReload((prev) => !prev);
   };

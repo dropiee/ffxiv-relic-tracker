@@ -5,10 +5,11 @@ import jobs from "../data/jobs.json" with {type: "json"};
 import series from "../data/series.json" with {type: "json"};
 
 const createProgressSeries = asyncHandler(async (req, res) => {
-  const { charId, relicSeries, relicJob } = req.body;
+  const { charId } = req.body;
 
   const newProgress = [];
 
+  // Only the charId is provided from the frontend. data for relicSeries and relicJob is retrieved from series.json and job.json.
   try {
     series.forEach((element) => {
       if (element === "Zodiac") {

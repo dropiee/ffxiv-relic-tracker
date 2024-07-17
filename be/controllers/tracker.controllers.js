@@ -8,6 +8,8 @@ const createTracker = asyncHandler(async (req, res) => {
   const { charId, trackerSeries, trackerJob } = req.body;
 
   const newSteps = [];
+
+  // Steps and quest data are retrieved from zodiacSteps.json and zodiacQuests.json
   for (let i = 0; i < 8; i++) {
     newSteps.push({
       stage: zodiacQuests[i].stage,
@@ -70,6 +72,7 @@ const getTrackerById = asyncHandler(async (req, res) => {
 const deleteTracker = asyncHandler(async (req, res) => {
   const { trackerId } = req.params;
 
+  // Mongoose-delete module is used to handle soft deletion
   try {
     const deletedTracker = await Tracker.delete({ _id: trackerId });
     res.status(204).send({
