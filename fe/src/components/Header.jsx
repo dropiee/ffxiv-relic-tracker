@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import MyContext from "../MyContext";
+import logo from "../../public/assets/ffxiv-relic-tracker-logo.png";
 
 const Header = () => {
   const { user, isLoggedIn, setIsLoggedIn, isActive, setIsActive, activeChar } =
@@ -15,10 +16,7 @@ const Header = () => {
   return (
     <header className="header">
       <Link to="/" className="logo">
-        <img
-          src="../../public/assets/ffxiv-relic-tracker-logo.png"
-          alt="FFXIV Relic Tracker"
-        />
+        <img src={logo} alt="FFXIV Relic Tracker" />
       </Link>
       <div className="flex gap-3 items-center px-3">
         <div className="flex flex-col text-center">
